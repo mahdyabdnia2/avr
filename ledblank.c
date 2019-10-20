@@ -14,22 +14,30 @@ while (1)
 {
 // Please write your application code here
 
-PORTC.4 = ! PORTC.4 ;
 
-if(PINC.1==0 & PINC.7==0){
+
+
+if(PINC.1==1 & PINC.7==0){
 
      
+      PORTC.4 = ! PORTC.4 ;
 
-delay_ms(1500) ;
+delay_ms(100) ;
 
 }
 
 
-if(PINC.1==0 & PINC.7==1){
+else if(PINC.1==1 & PINC.7==1){
 
-    
+     
+   PORTC.4 = ! PORTC.4 ;
 
 delay_ms(500) ;
+
+}
+
+else{
+PORTC.4=1;
 
 }
 
